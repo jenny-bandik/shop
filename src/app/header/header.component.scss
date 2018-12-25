@@ -1,0 +1,15 @@
+.navbar {
+	display: flex;
+	background: #673ab7;
+	padding: 10px;
+	justify-content: space-between;
+	&__container {
+		display: flex;
+	}
+	&__item {
+		margin-left: 10px;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}

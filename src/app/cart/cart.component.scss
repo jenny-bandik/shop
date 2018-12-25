@@ -1,0 +1,12 @@
+.cart {
+	cursor: pointer;
+	display: flex;
+	&__icon {
+		font-size: 34px;
+		color: #fff;
+		margin-right: 15px;
+	}
+	&__summ {
+		color: #fff;
+	}
+}

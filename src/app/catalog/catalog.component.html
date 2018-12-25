@@ -1,0 +1,20 @@
+<h1>Каталог</h1>
+<div class="catalog">
+	<div class="catalog__item "*ngFor="let item of catalog">
+
+		<mat-card class="catalog__card">
+			<mat-card-header>
+				<mat-card-title>{{item.name}}</mat-card-title>
+				<mat-card-subtitle>Цена:<span>{{item.price}}</span> $</mat-card-subtitle>
+			</mat-card-header>
+			<img mat-card-image src={{item.img}} alt="Photo of a Shiba Inu">
+			<mat-card-actions>
+				<button mat-raised-button color="primary" (click)="addCart()">В корзину</button>
+				<mat-form-field>
+
+					<input matInput type="number" (change)="changeCount($event.target.value)" min="1" value="1">
+				</mat-form-field>
+			</mat-card-actions>
+		</mat-card>
+	</div>
+</div>

@@ -1,0 +1,14 @@
+<div class="cart">
+  <mat-icon class="cart__icon">
+    shopping_cart
+  </mat-icon>
+
+
+  <div class="cart__summ" *ngIf="catalogData?.count; else empty">
+    <div >{{catalogData?.price * catalogData?.count}} руб.</div>
+    <div class="cart__count">Количество: {{catalogData?.count}}</div>
+  </div>
+  <div class="cart__summ" *ngIf="!catalogData?.count;">
+    Пусто
+  </div>
+</div>

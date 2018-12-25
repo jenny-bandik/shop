@@ -1,0 +1,18 @@
+<h1>Рассылка</h1>
+<div class="" *ngIf="result?.success; else form">
+  Письма отправлены
+</div>
+<ng-template #form>
+  <form class="form" (ngSubmit)="submit()">
+    <div class="red" *ngIf="!result?.success;">{{result?.errorText}}</div>
+    <fieldset [formGroup]="mailingControlList">
+      <mat-form-field>
+        <textarea matInput formControlName="message" placeholder="Новость"></textarea>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Отправить сообщение</button>
+    </fieldset>
+
+
+  </form>
+</ng-template>

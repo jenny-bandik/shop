@@ -1,0 +1,15 @@
+<header class="navbar" >
+  <div class="navbar__container">
+    <div class="navbar__item">
+      <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" mat-raised-button color="primary">Главная</a>
+    </div>
+    <div class="navbar__item">
+      <a routerLink="/mailing" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" mat-raised-button color="primary">Рассылка (администратор)</a>
+    </div>
+    <div class="navbar__item" *ngFor="let category of categories">
+      <a [routerLink]="['category', category.id]" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" mat-raised-button color="primary">{{category.name}}</a>
+    </div>
+  </div>
+  <app-cart></app-cart>
+
+</header>

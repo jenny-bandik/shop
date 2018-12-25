@@ -1,0 +1,29 @@
+.catalog {
+
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item {
+		width: 25%;
+		margin-bottom: 15px;
+	}
+	.mat-card-image {
+		width: 100%;
+		margin: 0;
+	}
+	.mat-card-actions {
+		margin: 0;
+		display: flex;
+		justify-content: space-between;
+		max-height: 45px;
+	}
+	.mat-form-field {
+		width: 30%;
+	}
+	.mat-form-field-appearance-legacy .mat-form-field-infix {
+		padding: 5px 0;
+	}
+	.mat-card {
+		margin: 0 5px;
+	}
+}

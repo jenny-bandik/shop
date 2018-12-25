@@ -1,0 +1,18 @@
+<div class="" *ngIf="result?.success; else form">
+	Подписка оформлена!
+</div>
+<ng-template #form>
+	<h2>Подписаться на новости</h2>
+	<form class="form" (ngSubmit)="submit()">
+		<div class="red" *ngIf="!result?.success;">{{result?.errorText}}</div>
+		<fieldset [formGroup]="subscriptionControlList">
+			<mat-form-field>
+				<input matInput formControlName="mail" placeholder="Почта" type="email">
+			</mat-form-field>
+
+			<button mat-raised-button color="primary" type="submit">Подписаться</button>
+		</fieldset>
+
+
+	</form>
+</ng-template>

@@ -1,0 +1,29 @@
+<h1 *ngIf="result?.success; else form">
+  Вы успешно зарегестрированы, {{result?.name}} ({{result?.login}})!
+</h1>
+
+<ng-template #form>
+  <h1>Регистрация</h1>
+
+  <form class="form" (ngSubmit)="submit()">
+    <div *ngIf="!result?.success;" class="red">{{result?.errorText}}</div>
+    <fieldset [formGroup]="registControlList">
+      <mat-form-field>
+        <input matInput formControlName="name" placeholder="Ваше имя" type="text">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput formControlName="mail" placeholder="E-mail" type="email">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput formControlName="login" placeholder="Логин" type="text">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput formControlName="password" placeholder="Пароль" type="password">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Зарегистрироваться</button>
+    </fieldset>
+
+
+  </form>
+</ng-template>
